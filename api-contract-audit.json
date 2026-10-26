@@ -1,0 +1,1428 @@
+﻿{
+    "GeneratedAt":  "2026-10-22T14:04:09.4439808+05:30",
+    "BaseUrl":  "http://127.0.0.1:8010",
+    "EndpointCount":  107,
+    "Endpoints":  [
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/auth/register",
+                          "Tags":  "Authentication",
+                          "OperationId":  "register_user_api_v1_auth_register_post",
+                          "Summary":  "Register User",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/UserRegister",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/auth/login",
+                          "Tags":  "Authentication",
+                          "OperationId":  "login_api_v1_auth_login_post",
+                          "Summary":  "Login",
+                          "RequestBody":  "application/x-www-form-urlencoded =\u003e #/components/schemas/Body_login_api_v1_auth_login_post",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/auth/refresh",
+                          "Tags":  "Authentication",
+                          "OperationId":  "refresh_access_token_api_v1_auth_refresh_post",
+                          "Summary":  "Refresh Access Token",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/RefreshTokenRequest",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/auth/logout",
+                          "Tags":  "Authentication",
+                          "OperationId":  "logout_api_v1_auth_logout_post",
+                          "Summary":  "Logout",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/RefreshTokenRequest",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/auth/forgot-password",
+                          "Tags":  "Authentication",
+                          "OperationId":  "forgot_password_api_v1_auth_forgot_password_post",
+                          "Summary":  "Forgot Password",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/ForgotPasswordRequest",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/auth/reset-password",
+                          "Tags":  "Authentication",
+                          "OperationId":  "reset_password_api_v1_auth_reset_password_post",
+                          "Summary":  "Reset Password",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/PasswordResetRequest",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/auth/me",
+                          "Tags":  "Authentication",
+                          "OperationId":  "get_my_profile_api_v1_auth_me_get",
+                          "Summary":  "Get My Profile",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/auth/me",
+                          "Tags":  "Authentication",
+                          "OperationId":  "update_my_profile_api_v1_auth_me_patch",
+                          "Summary":  "Update My Profile",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/UserProfileUpdate",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/users",
+                          "Tags":  "User Management",
+                          "OperationId":  "list_users_api_v1_users_get",
+                          "Summary":  "List Users",
+                          "RequestBody":  "",
+                          "Parameters":  "query:search, query:role, query:is_active, query:skip, query:limit"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/users/{user_id}",
+                          "Tags":  "User Management",
+                          "OperationId":  "get_user_api_v1_users__user_id__get",
+                          "Summary":  "Get User",
+                          "RequestBody":  "",
+                          "Parameters":  "path:user_id"
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/users/{user_id}",
+                          "Tags":  "User Management",
+                          "OperationId":  "update_user_api_v1_users__user_id__patch",
+                          "Summary":  "Update User",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/UserAdminUpdate",
+                          "Parameters":  "path:user_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/departments",
+                          "Tags":  "Departments",
+                          "OperationId":  "list_departments_api_v1_departments_get",
+                          "Summary":  "List Departments",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/departments",
+                          "Tags":  "Departments",
+                          "OperationId":  "create_department_api_v1_departments_post",
+                          "Summary":  "Create Department",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/DepartmentCreate",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/departments/stats",
+                          "Tags":  "Departments",
+                          "OperationId":  "department_statistics_api_v1_departments_stats_get",
+                          "Summary":  "Department Statistics",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/departments/{department_id}",
+                          "Tags":  "Departments",
+                          "OperationId":  "get_department_api_v1_departments__department_id__get",
+                          "Summary":  "Get Department",
+                          "RequestBody":  "",
+                          "Parameters":  "path:department_id"
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/departments/{department_id}",
+                          "Tags":  "Departments",
+                          "OperationId":  "update_department_api_v1_departments__department_id__patch",
+                          "Summary":  "Update Department",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/DepartmentUpdate",
+                          "Parameters":  "path:department_id"
+                      },
+                      {
+                          "Method":  "DELETE",
+                          "Path":  "/api/v1/departments/{department_id}",
+                          "Tags":  "Departments",
+                          "OperationId":  "deactivate_department_api_v1_departments__department_id__delete",
+                          "Summary":  "Deactivate Department",
+                          "RequestBody":  "",
+                          "Parameters":  "path:department_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/employees",
+                          "Tags":  "Employees",
+                          "OperationId":  "list_employees_api_v1_employees_get",
+                          "Summary":  "List Employees",
+                          "RequestBody":  "",
+                          "Parameters":  "query:q, query:department_id, query:employment_status, query:page, query:page_size"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/employees",
+                          "Tags":  "Employees",
+                          "OperationId":  "create_employee_api_v1_employees_post",
+                          "Summary":  "Create Employee",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/EmployeeCreate",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/employees/me",
+                          "Tags":  "Employees",
+                          "OperationId":  "get_my_employee_profile_api_v1_employees_me_get",
+                          "Summary":  "Get My Employee Profile",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/employees/{employee_id}",
+                          "Tags":  "Employees",
+                          "OperationId":  "get_employee_api_v1_employees__employee_id__get",
+                          "Summary":  "Get Employee",
+                          "RequestBody":  "",
+                          "Parameters":  "path:employee_id"
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/employees/{employee_id}",
+                          "Tags":  "Employees",
+                          "OperationId":  "update_employee_api_v1_employees__employee_id__patch",
+                          "Summary":  "Update Employee",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/EmployeeUpdate",
+                          "Parameters":  "path:employee_id"
+                      },
+                      {
+                          "Method":  "DELETE",
+                          "Path":  "/api/v1/employees/{employee_id}",
+                          "Tags":  "Employees",
+                          "OperationId":  "deactivate_employee_api_v1_employees__employee_id__delete",
+                          "Summary":  "Deactivate Employee",
+                          "RequestBody":  "",
+                          "Parameters":  "path:employee_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/shifts",
+                          "Tags":  "Shifts",
+                          "OperationId":  "list_shifts_api_v1_shifts_get",
+                          "Summary":  "List Shifts",
+                          "RequestBody":  "",
+                          "Parameters":  "query:active_only"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/shifts",
+                          "Tags":  "Shifts",
+                          "OperationId":  "create_shift_api_v1_shifts_post",
+                          "Summary":  "Create Shift",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/ShiftCreate",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/shifts/{shift_id}",
+                          "Tags":  "Shifts",
+                          "OperationId":  "get_shift_api_v1_shifts__shift_id__get",
+                          "Summary":  "Get Shift",
+                          "RequestBody":  "",
+                          "Parameters":  "path:shift_id"
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/shifts/{shift_id}",
+                          "Tags":  "Shifts",
+                          "OperationId":  "update_shift_api_v1_shifts__shift_id__patch",
+                          "Summary":  "Update Shift",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/ShiftUpdate",
+                          "Parameters":  "path:shift_id"
+                      },
+                      {
+                          "Method":  "DELETE",
+                          "Path":  "/api/v1/shifts/{shift_id}",
+                          "Tags":  "Shifts",
+                          "OperationId":  "deactivate_shift_api_v1_shifts__shift_id__delete",
+                          "Summary":  "Deactivate Shift",
+                          "RequestBody":  "",
+                          "Parameters":  "path:shift_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/shifts/{shift_id}/assignments",
+                          "Tags":  "Shifts",
+                          "OperationId":  "list_shift_assignments_api_v1_shifts__shift_id__assignments_get",
+                          "Summary":  "List Shift Assignments",
+                          "RequestBody":  "",
+                          "Parameters":  "path:shift_id, query:active_only"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/shifts/{shift_id}/assignments",
+                          "Tags":  "Shifts",
+                          "OperationId":  "assign_shift_api_v1_shifts__shift_id__assignments_post",
+                          "Summary":  "Assign Shift",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/ShiftAssignmentCreate",
+                          "Parameters":  "path:shift_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/attendance/check-in",
+                          "Tags":  "Attendance",
+                          "OperationId":  "check_in_api_v1_attendance_check_in_post",
+                          "Summary":  "Check In",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/attendance/check-out",
+                          "Tags":  "Attendance",
+                          "OperationId":  "check_out_api_v1_attendance_check_out_post",
+                          "Summary":  "Check Out",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/attendance/me",
+                          "Tags":  "Attendance",
+                          "OperationId":  "my_attendance_api_v1_attendance_me_get",
+                          "Summary":  "My Attendance",
+                          "RequestBody":  "",
+                          "Parameters":  "query:date_from, query:date_to, query:page, query:page_size"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/attendance",
+                          "Tags":  "Attendance",
+                          "OperationId":  "attendance_report_api_v1_attendance_get",
+                          "Summary":  "Attendance Report",
+                          "RequestBody":  "",
+                          "Parameters":  "query:employee_id, query:date_from, query:date_to, query:status, query:page, query:page_size"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/leaves/policies",
+                          "Tags":  "Leave Management",
+                          "OperationId":  "list_leave_policies_api_v1_leaves_policies_get",
+                          "Summary":  "List Leave Policies",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/leaves/policies",
+                          "Tags":  "Leave Management",
+                          "OperationId":  "create_leave_policy_api_v1_leaves_policies_post",
+                          "Summary":  "Create Leave Policy",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/LeavePolicyCreate",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/leaves/policies/{policy_id}",
+                          "Tags":  "Leave Management",
+                          "OperationId":  "update_leave_policy_api_v1_leaves_policies__policy_id__patch",
+                          "Summary":  "Update Leave Policy",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/LeavePolicyUpdate",
+                          "Parameters":  "path:policy_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/leaves",
+                          "Tags":  "Leave Management",
+                          "OperationId":  "list_leave_requests_api_v1_leaves_get",
+                          "Summary":  "List Leave Requests",
+                          "RequestBody":  "",
+                          "Parameters":  "query:status, query:employee_id, query:page, query:page_size"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/leaves",
+                          "Tags":  "Leave Management",
+                          "OperationId":  "apply_leave_api_v1_leaves_post",
+                          "Summary":  "Apply Leave",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/LeaveApply",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/leaves/me",
+                          "Tags":  "Leave Management",
+                          "OperationId":  "my_leave_requests_api_v1_leaves_me_get",
+                          "Summary":  "My Leave Requests",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/leaves/balance/me",
+                          "Tags":  "Leave Management",
+                          "OperationId":  "my_leave_balance_api_v1_leaves_balance_me_get",
+                          "Summary":  "My Leave Balance",
+                          "RequestBody":  "",
+                          "Parameters":  "query:year"
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/leaves/{leave_id}/decision",
+                          "Tags":  "Leave Management",
+                          "OperationId":  "review_leave_api_v1_leaves__leave_id__decision_patch",
+                          "Summary":  "Review Leave",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/LeaveDecision",
+                          "Parameters":  "path:leave_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/leaves/{leave_id}/cancel",
+                          "Tags":  "Leave Management",
+                          "OperationId":  "cancel_leave_api_v1_leaves__leave_id__cancel_post",
+                          "Summary":  "Cancel Leave",
+                          "RequestBody":  "",
+                          "Parameters":  "path:leave_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/payroll/generate",
+                          "Tags":  "Payroll",
+                          "OperationId":  "generate_payroll_api_v1_payroll_generate_post",
+                          "Summary":  "Generate Payroll",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/PayrollGenerate",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/payroll/me",
+                          "Tags":  "Payroll",
+                          "OperationId":  "my_payroll_api_v1_payroll_me_get",
+                          "Summary":  "My Payroll",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/payroll/summary",
+                          "Tags":  "Payroll",
+                          "OperationId":  "payroll_summary_api_v1_payroll_summary_get",
+                          "Summary":  "Payroll Summary",
+                          "RequestBody":  "",
+                          "Parameters":  "query:period_year, query:period_month"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/payroll",
+                          "Tags":  "Payroll",
+                          "OperationId":  "list_payroll_api_v1_payroll_get",
+                          "Summary":  "List Payroll",
+                          "RequestBody":  "",
+                          "Parameters":  "query:period_year, query:period_month, query:employee_id, query:status, query:page, query:page_size"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/payroll/{payroll_id}",
+                          "Tags":  "Payroll",
+                          "OperationId":  "get_payroll_api_v1_payroll__payroll_id__get",
+                          "Summary":  "Get Payroll",
+                          "RequestBody":  "",
+                          "Parameters":  "path:payroll_id"
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/payroll/{payroll_id}",
+                          "Tags":  "Payroll",
+                          "OperationId":  "update_payroll_api_v1_payroll__payroll_id__patch",
+                          "Summary":  "Update Payroll",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/PayrollUpdate",
+                          "Parameters":  "path:payroll_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/payroll/{payroll_id}/approve",
+                          "Tags":  "Payroll",
+                          "OperationId":  "approve_payroll_api_v1_payroll__payroll_id__approve_post",
+                          "Summary":  "Approve Payroll",
+                          "RequestBody":  "",
+                          "Parameters":  "path:payroll_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/payroll/{payroll_id}/mark-paid",
+                          "Tags":  "Payroll",
+                          "OperationId":  "mark_payroll_paid_api_v1_payroll__payroll_id__mark_paid_post",
+                          "Summary":  "Mark Payroll Paid",
+                          "RequestBody":  "",
+                          "Parameters":  "path:payroll_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/payroll/{payroll_id}/payslip",
+                          "Tags":  "Payroll",
+                          "OperationId":  "download_payslip_api_v1_payroll__payroll_id__payslip_get",
+                          "Summary":  "Download Payslip",
+                          "RequestBody":  "",
+                          "Parameters":  "path:payroll_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/notifications",
+                          "Tags":  "Notifications",
+                          "OperationId":  "list_notifications_api_v1_notifications_get",
+                          "Summary":  "List Notifications",
+                          "RequestBody":  "",
+                          "Parameters":  "query:unread_only, query:limit"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/notifications",
+                          "Tags":  "Notifications",
+                          "OperationId":  "create_notification_api_v1_notifications_post",
+                          "Summary":  "Create Notification",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/NotificationCreate",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/notifications/unread-count",
+                          "Tags":  "Notifications",
+                          "OperationId":  "get_unread_notification_count_api_v1_notifications_unread_count_get",
+                          "Summary":  "Get Unread Notification Count",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/notifications/escalation/run",
+                          "Tags":  "Notifications",
+                          "OperationId":  "trigger_notification_escalation_api_v1_notifications_escalation_run_post",
+                          "Summary":  "Trigger Notification Escalation",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/notifications/{notification_id}/read",
+                          "Tags":  "Notifications",
+                          "OperationId":  "mark_notification_read_api_v1_notifications__notification_id__read_patch",
+                          "Summary":  "Mark Notification Read",
+                          "RequestBody":  "",
+                          "Parameters":  "path:notification_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/notifications/read-all",
+                          "Tags":  "Notifications",
+                          "OperationId":  "mark_all_notifications_read_api_v1_notifications_read_all_post",
+                          "Summary":  "Mark All Notifications Read",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/chat/messages",
+                          "Tags":  "Chat",
+                          "OperationId":  "send_message_api_v1_chat_messages_post",
+                          "Summary":  "Send Message",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/ChatSend",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/chat/conversations/{other_user_id}",
+                          "Tags":  "Chat",
+                          "OperationId":  "get_conversation_api_v1_chat_conversations__other_user_id__get",
+                          "Summary":  "Get Conversation",
+                          "RequestBody":  "",
+                          "Parameters":  "path:other_user_id, query:limit, query:before_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/chat/conversations/{other_user_id}/read",
+                          "Tags":  "Chat",
+                          "OperationId":  "mark_conversation_read_api_v1_chat_conversations__other_user_id__read_post",
+                          "Summary":  "Mark Conversation Read",
+                          "RequestBody":  "",
+                          "Parameters":  "path:other_user_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/documents",
+                          "Tags":  "Documents",
+                          "OperationId":  "list_documents_api_v1_documents_get",
+                          "Summary":  "List Documents",
+                          "RequestBody":  "",
+                          "Parameters":  "query:employee_id, query:document_type, query:limit"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/documents",
+                          "Tags":  "Documents",
+                          "OperationId":  "upload_document_api_v1_documents_post",
+                          "Summary":  "Upload Document",
+                          "RequestBody":  "multipart/form-data =\u003e #/components/schemas/Body_upload_document_api_v1_documents_post",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/documents/{document_id}/download",
+                          "Tags":  "Documents",
+                          "OperationId":  "download_document_api_v1_documents__document_id__download_get",
+                          "Summary":  "Download Document",
+                          "RequestBody":  "",
+                          "Parameters":  "path:document_id"
+                      },
+                      {
+                          "Method":  "DELETE",
+                          "Path":  "/api/v1/documents/{document_id}",
+                          "Tags":  "Documents",
+                          "OperationId":  "delete_document_api_v1_documents__document_id__delete",
+                          "Summary":  "Delete Document",
+                          "RequestBody":  "",
+                          "Parameters":  "path:document_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/datasets/upload",
+                          "Tags":  "Dataset Management",
+                          "OperationId":  "upload_dataset_api_v1_datasets_upload_post",
+                          "Summary":  "Upload Dataset",
+                          "RequestBody":  "multipart/form-data =\u003e #/components/schemas/Body_upload_dataset_api_v1_datasets_upload_post",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/datasets",
+                          "Tags":  "Dataset Management",
+                          "OperationId":  "list_datasets_api_v1_datasets_get",
+                          "Summary":  "List Datasets",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/datasets/{dataset_id}",
+                          "Tags":  "Dataset Management",
+                          "OperationId":  "get_dataset_api_v1_datasets__dataset_id__get",
+                          "Summary":  "Get Dataset",
+                          "RequestBody":  "",
+                          "Parameters":  "path:dataset_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/datasets/{dataset_id}/failed-records",
+                          "Tags":  "Dataset Management",
+                          "OperationId":  "get_failed_records_api_v1_datasets__dataset_id__failed_records_get",
+                          "Summary":  "Get Failed Records",
+                          "RequestBody":  "",
+                          "Parameters":  "path:dataset_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/datasets/{dataset_id}/train",
+                          "Tags":  "Dataset Management",
+                          "OperationId":  "train_dataset_api_v1_datasets__dataset_id__train_post",
+                          "Summary":  "Train Dataset",
+                          "RequestBody":  "",
+                          "Parameters":  "path:dataset_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/attrition/predict",
+                          "Tags":  "AI Attrition",
+                          "OperationId":  "predict_attrition_api_v1_attrition_predict_post",
+                          "Summary":  "Predict Attrition",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/AttritionPredictRequest",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/attrition/predictions",
+                          "Tags":  "AI Attrition",
+                          "OperationId":  "list_predictions_api_v1_attrition_predictions_get",
+                          "Summary":  "List Predictions",
+                          "RequestBody":  "",
+                          "Parameters":  "query:employee_id, query:risk_level, query:page, query:page_size"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/attrition/monitoring",
+                          "Tags":  "AI Attrition",
+                          "OperationId":  "risk_monitoring_logs_api_v1_attrition_monitoring_get",
+                          "Summary":  "Risk Monitoring Logs",
+                          "RequestBody":  "",
+                          "Parameters":  "query:employee_id, query:risk_level, query:limit"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/attrition/analytics/departments",
+                          "Tags":  "AI Attrition",
+                          "OperationId":  "department_attrition_analytics_api_v1_attrition_analytics_departments_get",
+                          "Summary":  "Department Attrition Analytics",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/alerts",
+                          "Tags":  "Smart Alerts",
+                          "OperationId":  "list_alerts_api_v1_alerts_get",
+                          "Summary":  "List Alerts",
+                          "RequestBody":  "",
+                          "Parameters":  "query:status, query:limit"
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/alerts/{alert_id}/acknowledge",
+                          "Tags":  "Smart Alerts",
+                          "OperationId":  "acknowledge_alert_api_v1_alerts__alert_id__acknowledge_patch",
+                          "Summary":  "Acknowledge Alert",
+                          "RequestBody":  "",
+                          "Parameters":  "path:alert_id"
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/alerts/{alert_id}/resolve",
+                          "Tags":  "Smart Alerts",
+                          "OperationId":  "resolve_alert_api_v1_alerts__alert_id__resolve_patch",
+                          "Summary":  "Resolve Alert",
+                          "RequestBody":  "",
+                          "Parameters":  "path:alert_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/forecasting/generate",
+                          "Tags":  "Workforce Forecasting",
+                          "OperationId":  "generate_monthly_forecast_api_v1_forecasting_generate_post",
+                          "Summary":  "Generate Monthly Forecast",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/ForecastRequest",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/forecasting/generate-year",
+                          "Tags":  "Workforce Forecasting",
+                          "OperationId":  "generate_yearly_forecast_api_v1_forecasting_generate_year_post",
+                          "Summary":  "Generate Yearly Forecast",
+                          "RequestBody":  "",
+                          "Parameters":  "query:forecast_year, query:department_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/forecasting",
+                          "Tags":  "Workforce Forecasting",
+                          "OperationId":  "list_forecasts_api_v1_forecasting_get",
+                          "Summary":  "List Forecasts",
+                          "RequestBody":  "",
+                          "Parameters":  "query:forecast_year, query:forecast_month, query:department_id, query:limit"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/interventions",
+                          "Tags":  "HR Interventions",
+                          "OperationId":  "list_interventions_api_v1_interventions_get",
+                          "Summary":  "List Interventions",
+                          "RequestBody":  "",
+                          "Parameters":  "query:employee_id, query:status, query:limit"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/interventions",
+                          "Tags":  "HR Interventions",
+                          "OperationId":  "create_intervention_api_v1_interventions_post",
+                          "Summary":  "Create Intervention",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/InterventionCreate",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/interventions/{intervention_id}",
+                          "Tags":  "HR Interventions",
+                          "OperationId":  "update_intervention_api_v1_interventions__intervention_id__patch",
+                          "Summary":  "Update Intervention",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/InterventionUpdate",
+                          "Parameters":  "path:intervention_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/recommendations",
+                          "Tags":  "AI Recommendations",
+                          "OperationId":  "list_recommendations_api_v1_recommendations_get",
+                          "Summary":  "List Recommendations",
+                          "RequestBody":  "",
+                          "Parameters":  "query:employee_id, query:department_id, query:limit"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/recommendations/generate",
+                          "Tags":  "AI Recommendations",
+                          "OperationId":  "generate_recommendations_api_v1_recommendations_generate_post",
+                          "Summary":  "Generate Recommendations",
+                          "RequestBody":  "",
+                          "Parameters":  "query:department_id, query:minimum_risk"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/dashboard/overview",
+                          "Tags":  "Workforce Dashboard",
+                          "OperationId":  "dashboard_overview_api_v1_dashboard_overview_get",
+                          "Summary":  "Dashboard Overview",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/dashboard/attendance-summary",
+                          "Tags":  "Workforce Dashboard",
+                          "OperationId":  "attendance_summary_api_v1_dashboard_attendance_summary_get",
+                          "Summary":  "Attendance Summary",
+                          "RequestBody":  "",
+                          "Parameters":  "query:report_date"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/dashboard/payroll-summary",
+                          "Tags":  "Workforce Dashboard",
+                          "OperationId":  "payroll_summary_api_v1_dashboard_payroll_summary_get",
+                          "Summary":  "Payroll Summary",
+                          "RequestBody":  "",
+                          "Parameters":  "query:period_year, query:period_month"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/dashboard/department-analytics",
+                          "Tags":  "Workforce Dashboard",
+                          "OperationId":  "department_analytics_api_v1_dashboard_department_analytics_get",
+                          "Summary":  "Department Analytics",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/dashboard/attrition-summary",
+                          "Tags":  "Workforce Dashboard",
+                          "OperationId":  "attrition_summary_api_v1_dashboard_attrition_summary_get",
+                          "Summary":  "Attrition Summary",
+                          "RequestBody":  "",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/audit-logs",
+                          "Tags":  "Audit Logs",
+                          "OperationId":  "list_audit_logs_api_v1_audit_logs_get",
+                          "Summary":  "List Audit Logs",
+                          "RequestBody":  "",
+                          "Parameters":  "query:action, query:entity_type, query:actor_user_id, query:date_from, query:date_to, query:limit, query:offset"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/tasks",
+                          "Tags":  "Workflow Tasks",
+                          "OperationId":  "list_tasks_api_v1_tasks_get",
+                          "Summary":  "List Tasks",
+                          "RequestBody":  "",
+                          "Parameters":  "query:status, query:assigned_to, query:due_before, query:limit, query:offset"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/tasks",
+                          "Tags":  "Workflow Tasks",
+                          "OperationId":  "create_task_api_v1_tasks_post",
+                          "Summary":  "Create Task",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/TaskCreate",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/tasks/{task_id}",
+                          "Tags":  "Workflow Tasks",
+                          "OperationId":  "update_task_api_v1_tasks__task_id__patch",
+                          "Summary":  "Update Task",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/TaskUpdate",
+                          "Parameters":  "path:task_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/performance-reviews",
+                          "Tags":  "Performance Reviews",
+                          "OperationId":  "list_reviews_api_v1_performance_reviews_get",
+                          "Summary":  "List Reviews",
+                          "RequestBody":  "",
+                          "Parameters":  "query:employee_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/performance-reviews",
+                          "Tags":  "Performance Reviews",
+                          "OperationId":  "create_review_api_v1_performance_reviews_post",
+                          "Summary":  "Create Review",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/ReviewCreate",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/performance-reviews/{review_id}",
+                          "Tags":  "Performance Reviews",
+                          "OperationId":  "get_review_api_v1_performance_reviews__review_id__get",
+                          "Summary":  "Get Review",
+                          "RequestBody":  "",
+                          "Parameters":  "path:review_id"
+                      },
+                      {
+                          "Method":  "PATCH",
+                          "Path":  "/api/v1/performance-reviews/{review_id}",
+                          "Tags":  "Performance Reviews",
+                          "OperationId":  "update_review_api_v1_performance_reviews__review_id__patch",
+                          "Summary":  "Update Review",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/ReviewUpdate",
+                          "Parameters":  "path:review_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/performance-reviews/{review_id}/submit",
+                          "Tags":  "Performance Reviews",
+                          "OperationId":  "submit_review_api_v1_performance_reviews__review_id__submit_post",
+                          "Summary":  "Submit Review",
+                          "RequestBody":  "",
+                          "Parameters":  "path:review_id"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/performance-reviews/{review_id}/acknowledge",
+                          "Tags":  "Performance Reviews",
+                          "OperationId":  "acknowledge_review_api_v1_performance_reviews__review_id__acknowledge_post",
+                          "Summary":  "Acknowledge Review",
+                          "RequestBody":  "",
+                          "Parameters":  "path:review_id"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/reports/employees",
+                          "Tags":  "Reports \u0026 Export",
+                          "OperationId":  "employee_report_api_v1_reports_employees_get",
+                          "Summary":  "Employee Report",
+                          "RequestBody":  "",
+                          "Parameters":  "query:format, query:q, query:department_id, query:employment_status, query:limit"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/reports/attendance",
+                          "Tags":  "Reports \u0026 Export",
+                          "OperationId":  "attendance_report_api_v1_reports_attendance_get",
+                          "Summary":  "Attendance Report",
+                          "RequestBody":  "",
+                          "Parameters":  "query:format, query:date_from, query:date_to, query:employee_id, query:status, query:limit"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/reports/payroll",
+                          "Tags":  "Reports \u0026 Export",
+                          "OperationId":  "payroll_report_api_v1_reports_payroll_get",
+                          "Summary":  "Payroll Report",
+                          "RequestBody":  "",
+                          "Parameters":  "query:format, query:period_year, query:period_month, query:employee_id, query:status, query:limit"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/reports/attrition",
+                          "Tags":  "Reports \u0026 Export",
+                          "OperationId":  "attrition_report_api_v1_reports_attrition_get",
+                          "Summary":  "Attrition Report",
+                          "RequestBody":  "",
+                          "Parameters":  "query:format, query:employee_id, query:risk_level, query:limit"
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/workforce-activities",
+                          "Tags":  "Workforce Activity",
+                          "OperationId":  "list_activities_api_v1_workforce_activities_get",
+                          "Summary":  "List Activities",
+                          "RequestBody":  "",
+                          "Parameters":  "query:activity_type, query:before_id, query:limit"
+                      },
+                      {
+                          "Method":  "POST",
+                          "Path":  "/api/v1/workforce-activities",
+                          "Tags":  "Workforce Activity",
+                          "OperationId":  "create_activity_api_v1_workforce_activities_post",
+                          "Summary":  "Create Activity",
+                          "RequestBody":  "application/json =\u003e #/components/schemas/WorkforceActivityCreate",
+                          "Parameters":  ""
+                      },
+                      {
+                          "Method":  "GET",
+                          "Path":  "/api/v1/search",
+                          "Tags":  "Advanced Search",
+                          "OperationId":  "advanced_search_api_v1_search_get",
+                          "Summary":  "Advanced Search",
+                          "RequestBody":  "",
+                          "Parameters":  "query:q, query:entities, query:limit_per_type"
+                      }
+                  ],
+    "Schemas":  [
+                    {
+                        "Name":  "AttendancePage",
+                        "Type":  "object",
+                        "Required":  "items, total, page, page_size",
+                        "Fields":  "items, total, page, page_size"
+                    },
+                    {
+                        "Name":  "AttendanceResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_id, shift_id, attendance_date, check_in, check_out, working_minutes, overtime_minutes, status, notes, created_at, updated_at",
+                        "Fields":  "id, employee_id, shift_id, attendance_date, check_in, check_out, working_minutes, overtime_minutes, status, notes, created_at, updated_at"
+                    },
+                    {
+                        "Name":  "AttendanceSummary",
+                        "Type":  "object",
+                        "Required":  "report_date, total_records, checked_in, checked_out, average_working_hours, total_overtime_hours",
+                        "Fields":  "report_date, total_records, checked_in, checked_out, average_working_hours, total_overtime_hours"
+                    },
+                    {
+                        "Name":  "AttritionPredictRequest",
+                        "Type":  "object",
+                        "Required":  "dataset_version_id, features",
+                        "Fields":  "dataset_version_id, employee_id, features"
+                    },
+                    {
+                        "Name":  "AttritionPredictionResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_id, dataset_version_id, predicted_attrition, risk_probability, confidence_score, risk_level, model_version, input_features, created_by_user_id, created_at",
+                        "Fields":  "id, employee_id, dataset_version_id, predicted_attrition, risk_probability, confidence_score, risk_level, model_version, input_features, created_by_user_id, created_at"
+                    },
+                    {
+                        "Name":  "AttritionSummary",
+                        "Type":  "object",
+                        "Required":  "employees_with_predictions, predicted_attrition_count, low_risk_count, medium_risk_count, high_risk_count, critical_risk_count, average_risk_percent",
+                        "Fields":  "employees_with_predictions, predicted_attrition_count, low_risk_count, medium_risk_count, high_risk_count, critical_risk_count, average_risk_percent"
+                    },
+                    {
+                        "Name":  "AuditLogResponse",
+                        "Type":  "object",
+                        "Required":  "id, actor_user_id, action, entity_type, entity_id, details, ip_address, user_agent, created_at",
+                        "Fields":  "id, actor_user_id, action, entity_type, entity_id, details, ip_address, user_agent, created_at"
+                    },
+                    {
+                        "Name":  "Body_login_api_v1_auth_login_post",
+                        "Type":  "object",
+                        "Required":  "username, password",
+                        "Fields":  "grant_type, username, password, scope, client_id, client_secret"
+                    },
+                    {
+                        "Name":  "Body_upload_dataset_api_v1_datasets_upload_post",
+                        "Type":  "object",
+                        "Required":  "file",
+                        "Fields":  "file, target_column"
+                    },
+                    {
+                        "Name":  "Body_upload_document_api_v1_documents_post",
+                        "Type":  "object",
+                        "Required":  "file",
+                        "Fields":  "file, document_type, employee_id"
+                    },
+                    {
+                        "Name":  "ChatMessageResponse",
+                        "Type":  "object",
+                        "Required":  "id, sender_id, recipient_id, message, sent_at, read_at",
+                        "Fields":  "id, sender_id, recipient_id, message, sent_at, read_at"
+                    },
+                    {
+                        "Name":  "ChatSend",
+                        "Type":  "object",
+                        "Required":  "recipient_id, message",
+                        "Fields":  "recipient_id, message"
+                    },
+                    {
+                        "Name":  "DashboardOverview",
+                        "Type":  "object",
+                        "Required":  "total_employees, active_employees, inactive_employees, active_departments, attendance_records_today, pending_leave_requests, high_risk_employees, open_tasks, open_interventions, unresolved_alerts",
+                        "Fields":  "total_employees, active_employees, inactive_employees, active_departments, attendance_records_today, pending_leave_requests, high_risk_employees, open_tasks, open_interventions, unresolved_alerts"
+                    },
+                    {
+                        "Name":  "DatasetResponse",
+                        "Type":  "object",
+                        "Required":  "id, version_number, original_filename, target_column, total_rows, valid_rows, failed_rows, feature_columns, validation_summary, model_metrics, status, error_message, uploaded_by, created_at",
+                        "Fields":  "id, version_number, original_filename, target_column, total_rows, valid_rows, failed_rows, feature_columns, validation_summary, model_metrics, status, error_message, uploaded_by, created_at"
+                    },
+                    {
+                        "Name":  "DepartmentAnalytics",
+                        "Type":  "object",
+                        "Required":  "department_id, department_name, active_employees, employees_with_predictions, predicted_attrition_count, average_risk_percent",
+                        "Fields":  "department_id, department_name, active_employees, employees_with_predictions, predicted_attrition_count, average_risk_percent"
+                    },
+                    {
+                        "Name":  "DepartmentAttritionAnalytics",
+                        "Type":  "object",
+                        "Required":  "department_id, department_name, employees_with_predictions, predicted_attrition_count, average_risk_percent",
+                        "Fields":  "department_id, department_name, employees_with_predictions, predicted_attrition_count, average_risk_percent"
+                    },
+                    {
+                        "Name":  "DepartmentCreate",
+                        "Type":  "object",
+                        "Required":  "name",
+                        "Fields":  "name, description"
+                    },
+                    {
+                        "Name":  "DepartmentResponse",
+                        "Type":  "object",
+                        "Required":  "id, name, description, is_active, created_at",
+                        "Fields":  "id, name, description, is_active, created_at"
+                    },
+                    {
+                        "Name":  "DepartmentStat",
+                        "Type":  "object",
+                        "Required":  "id, name, employee_count",
+                        "Fields":  "id, name, employee_count"
+                    },
+                    {
+                        "Name":  "DepartmentUpdate",
+                        "Type":  "object",
+                        "Required":  "",
+                        "Fields":  "name, description, is_active"
+                    },
+                    {
+                        "Name":  "DocumentResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_id, uploaded_by, original_filename, document_type, content_type, file_size, is_deleted, uploaded_at",
+                        "Fields":  "id, employee_id, uploaded_by, original_filename, document_type, content_type, file_size, is_deleted, uploaded_at"
+                    },
+                    {
+                        "Name":  "EmployeeCreate",
+                        "Type":  "object",
+                        "Required":  "employee_code, first_name, last_name, email",
+                        "Fields":  "employee_code, first_name, last_name, email, phone, job_title, employment_type, employment_status, date_of_joining, base_salary, department_id, manager_id, user_id"
+                    },
+                    {
+                        "Name":  "EmployeePage",
+                        "Type":  "object",
+                        "Required":  "items, total, page, page_size",
+                        "Fields":  "items, total, page, page_size"
+                    },
+                    {
+                        "Name":  "EmployeeResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_code, first_name, last_name, email, phone, job_title, employment_type, employment_status, date_of_joining, base_salary, department_id, manager_id, user_id, created_at, updated_at",
+                        "Fields":  "id, employee_code, first_name, last_name, email, phone, job_title, employment_type, employment_status, date_of_joining, base_salary, department_id, manager_id, user_id, created_at, updated_at"
+                    },
+                    {
+                        "Name":  "EmployeeUpdate",
+                        "Type":  "object",
+                        "Required":  "",
+                        "Fields":  "employee_code, first_name, last_name, email, phone, job_title, employment_type, employment_status, date_of_joining, base_salary, department_id, manager_id, user_id"
+                    },
+                    {
+                        "Name":  "FailedDatasetRecordResponse",
+                        "Type":  "object",
+                        "Required":  "id, dataset_version_id, row_number, error_message, row_data, created_at",
+                        "Fields":  "id, dataset_version_id, row_number, error_message, row_data, created_at"
+                    },
+                    {
+                        "Name":  "ForecastRequest",
+                        "Type":  "object",
+                        "Required":  "forecast_year",
+                        "Fields":  "forecast_year, forecast_month, department_id"
+                    },
+                    {
+                        "Name":  "ForecastResponse",
+                        "Type":  "object",
+                        "Required":  "id, forecast_year, forecast_month, department_id, forecast_scope, predicted_headcount, predicted_attrition_count, attrition_rate_percent, stability_score, model_version, forecast_data, created_by, created_at",
+                        "Fields":  "id, forecast_year, forecast_month, department_id, forecast_scope, predicted_headcount, predicted_attrition_count, attrition_rate_percent, stability_score, model_version, forecast_data, created_by, created_at"
+                    },
+                    {
+                        "Name":  "ForgotPasswordRequest",
+                        "Type":  "object",
+                        "Required":  "email",
+                        "Fields":  "email"
+                    },
+                    {
+                        "Name":  "HTTPValidationError",
+                        "Type":  "object",
+                        "Required":  "",
+                        "Fields":  "detail"
+                    },
+                    {
+                        "Name":  "InterventionCreate",
+                        "Type":  "object",
+                        "Required":  "employee_id, title, category, recommendation",
+                        "Fields":  "employee_id, prediction_id, title, category, recommendation, assigned_to, follow_up_date"
+                    },
+                    {
+                        "Name":  "InterventionResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_id, prediction_id, title, category, recommendation, assigned_to, follow_up_date, status, outcome_notes, completed_at, created_by, created_at",
+                        "Fields":  "id, employee_id, prediction_id, title, category, recommendation, assigned_to, follow_up_date, status, outcome_notes, completed_at, created_by, created_at"
+                    },
+                    {
+                        "Name":  "InterventionUpdate",
+                        "Type":  "object",
+                        "Required":  "",
+                        "Fields":  "status, assigned_to, follow_up_date, outcome_notes"
+                    },
+                    {
+                        "Name":  "LeaveApply",
+                        "Type":  "object",
+                        "Required":  "policy_id, start_date, end_date, reason",
+                        "Fields":  "policy_id, start_date, end_date, reason"
+                    },
+                    {
+                        "Name":  "LeaveBalanceItem",
+                        "Type":  "object",
+                        "Required":  "policy_id, policy_name, annual_quota, approved_days, pending_days, available_days",
+                        "Fields":  "policy_id, policy_name, annual_quota, approved_days, pending_days, available_days"
+                    },
+                    {
+                        "Name":  "LeaveBalanceResponse",
+                        "Type":  "object",
+                        "Required":  "year, items",
+                        "Fields":  "year, items"
+                    },
+                    {
+                        "Name":  "LeaveDecision",
+                        "Type":  "object",
+                        "Required":  "decision",
+                        "Fields":  "decision, comments"
+                    },
+                    {
+                        "Name":  "LeavePage",
+                        "Type":  "object",
+                        "Required":  "items, total, page, page_size",
+                        "Fields":  "items, total, page, page_size"
+                    },
+                    {
+                        "Name":  "LeavePolicyCreate",
+                        "Type":  "object",
+                        "Required":  "name",
+                        "Fields":  "name, description, annual_quota, is_paid"
+                    },
+                    {
+                        "Name":  "LeavePolicyResponse",
+                        "Type":  "object",
+                        "Required":  "id, name, description, annual_quota, is_paid, is_active, created_at",
+                        "Fields":  "id, name, description, annual_quota, is_paid, is_active, created_at"
+                    },
+                    {
+                        "Name":  "LeavePolicyUpdate",
+                        "Type":  "object",
+                        "Required":  "",
+                        "Fields":  "name, description, annual_quota, is_paid, is_active"
+                    },
+                    {
+                        "Name":  "LeaveResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_id, policy_id, start_date, end_date, total_days, reason, status, reviewer_id, reviewed_at, reviewer_comments, created_at, updated_at",
+                        "Fields":  "id, employee_id, policy_id, start_date, end_date, total_days, reason, status, reviewer_id, reviewed_at, reviewer_comments, created_at, updated_at"
+                    },
+                    {
+                        "Name":  "MessageResponse",
+                        "Type":  "object",
+                        "Required":  "message",
+                        "Fields":  "message"
+                    },
+                    {
+                        "Name":  "NotificationCreate",
+                        "Type":  "object",
+                        "Required":  "target_user_id, title, message",
+                        "Fields":  "target_user_id, notification_type, title, message, priority"
+                    },
+                    {
+                        "Name":  "NotificationResponse",
+                        "Type":  "object",
+                        "Required":  "id, user_id, notification_type, title, message, priority, read_status, read_at, created_at",
+                        "Fields":  "id, user_id, notification_type, title, message, priority, read_status, read_at, created_at"
+                    },
+                    {
+                        "Name":  "PasswordResetRequest",
+                        "Type":  "object",
+                        "Required":  "token, new_password",
+                        "Fields":  "token, new_password"
+                    },
+                    {
+                        "Name":  "PayrollGenerate",
+                        "Type":  "object",
+                        "Required":  "employee_id, period_year, period_month",
+                        "Fields":  "employee_id, period_year, period_month, allowances, bonus, tax_deduction, other_deductions"
+                    },
+                    {
+                        "Name":  "PayrollPage",
+                        "Type":  "object",
+                        "Required":  "items, total, page, page_size",
+                        "Fields":  "items, total, page, page_size"
+                    },
+                    {
+                        "Name":  "PayrollResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_id, period_year, period_month, annual_base_salary, monthly_base_salary, allowances, bonus, tax_deduction, other_deductions, gross_pay, total_deductions, net_pay, status, generated_by, paid_at, created_at, updated_at",
+                        "Fields":  "id, employee_id, period_year, period_month, annual_base_salary, monthly_base_salary, allowances, bonus, tax_deduction, other_deductions, gross_pay, total_deductions, net_pay, status, generated_by, paid_at, created_at, updated_at"
+                    },
+                    {
+                        "Name":  "PayrollSummary",
+                        "Type":  "object",
+                        "Required":  "period_year, period_month, employee_count, gross_pay, total_deductions, net_pay, generated_count, approved_count, paid_count",
+                        "Fields":  "period_year, period_month, employee_count, gross_pay, total_deductions, net_pay, generated_count, approved_count, paid_count"
+                    },
+                    {
+                        "Name":  "PayrollUpdate",
+                        "Type":  "object",
+                        "Required":  "",
+                        "Fields":  "allowances, bonus, tax_deduction, other_deductions"
+                    },
+                    {
+                        "Name":  "PredictionPage",
+                        "Type":  "object",
+                        "Required":  "items, total, page, page_size",
+                        "Fields":  "items, total, page, page_size"
+                    },
+                    {
+                        "Name":  "RecommendationResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_id, department_id, prediction_id, category, title, recommendation, priority, recommendation_data, created_by, created_at",
+                        "Fields":  "id, employee_id, department_id, prediction_id, category, title, recommendation, priority, recommendation_data, created_by, created_at"
+                    },
+                    {
+                        "Name":  "RefreshTokenRequest",
+                        "Type":  "object",
+                        "Required":  "refresh_token",
+                        "Fields":  "refresh_token"
+                    },
+                    {
+                        "Name":  "ReviewCreate",
+                        "Type":  "object",
+                        "Required":  "employee_id, review_period_start, review_period_end",
+                        "Fields":  "employee_id, review_period_start, review_period_end, rating, strengths, improvement_areas, goals, reviewer_comments"
+                    },
+                    {
+                        "Name":  "ReviewResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_id, reviewer_id, review_period_start, review_period_end, rating, strengths, improvement_areas, goals, reviewer_comments, status, submitted_at, acknowledged_at, created_at, updated_at",
+                        "Fields":  "id, employee_id, reviewer_id, review_period_start, review_period_end, rating, strengths, improvement_areas, goals, reviewer_comments, status, submitted_at, acknowledged_at, created_at, updated_at"
+                    },
+                    {
+                        "Name":  "ReviewUpdate",
+                        "Type":  "object",
+                        "Required":  "",
+                        "Fields":  "rating, strengths, improvement_areas, goals, reviewer_comments"
+                    },
+                    {
+                        "Name":  "RiskMonitoringResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_id, prediction_id, previous_risk_percent, current_risk_percent, risk_change_percent, risk_level, reason, detected_at",
+                        "Fields":  "id, employee_id, prediction_id, previous_risk_percent, current_risk_percent, risk_change_percent, risk_level, reason, detected_at"
+                    },
+                    {
+                        "Name":  "ShiftAssignmentCreate",
+                        "Type":  "object",
+                        "Required":  "employee_id, effective_from",
+                        "Fields":  "employee_id, effective_from, effective_to"
+                    },
+                    {
+                        "Name":  "ShiftAssignmentResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_id, shift_id, effective_from, effective_to, is_active, created_at",
+                        "Fields":  "id, employee_id, shift_id, effective_from, effective_to, is_active, created_at"
+                    },
+                    {
+                        "Name":  "ShiftCreate",
+                        "Type":  "object",
+                        "Required":  "name, start_time, end_time",
+                        "Fields":  "name, start_time, end_time, break_minutes"
+                    },
+                    {
+                        "Name":  "ShiftResponse",
+                        "Type":  "object",
+                        "Required":  "id, name, start_time, end_time, break_minutes, is_active, created_at",
+                        "Fields":  "id, name, start_time, end_time, break_minutes, is_active, created_at"
+                    },
+                    {
+                        "Name":  "ShiftUpdate",
+                        "Type":  "object",
+                        "Required":  "",
+                        "Fields":  "name, start_time, end_time, break_minutes, is_active"
+                    },
+                    {
+                        "Name":  "TaskCreate",
+                        "Type":  "object",
+                        "Required":  "title",
+                        "Fields":  "title, description, assigned_to, related_employee_id, priority, due_date"
+                    },
+                    {
+                        "Name":  "TaskResponse",
+                        "Type":  "object",
+                        "Required":  "id, title, description, created_by, assigned_to, related_employee_id, status, priority, due_date, completed_at, created_at, updated_at",
+                        "Fields":  "id, title, description, created_by, assigned_to, related_employee_id, status, priority, due_date, completed_at, created_at, updated_at"
+                    },
+                    {
+                        "Name":  "TaskUpdate",
+                        "Type":  "object",
+                        "Required":  "",
+                        "Fields":  "title, description, assigned_to, related_employee_id, priority, status, due_date"
+                    },
+                    {
+                        "Name":  "TokenResponse",
+                        "Type":  "object",
+                        "Required":  "access_token, refresh_token, expires_in",
+                        "Fields":  "access_token, refresh_token, token_type, expires_in"
+                    },
+                    {
+                        "Name":  "UserAdminResponse",
+                        "Type":  "object",
+                        "Required":  "id, full_name, email, role, is_active, created_at",
+                        "Fields":  "id, full_name, email, role, is_active, created_at"
+                    },
+                    {
+                        "Name":  "UserAdminUpdate",
+                        "Type":  "object",
+                        "Required":  "",
+                        "Fields":  "full_name, email, role, is_active"
+                    },
+                    {
+                        "Name":  "UserProfileUpdate",
+                        "Type":  "object",
+                        "Required":  "",
+                        "Fields":  "full_name, email"
+                    },
+                    {
+                        "Name":  "UserRegister",
+                        "Type":  "object",
+                        "Required":  "full_name, email, password",
+                        "Fields":  "full_name, email, password"
+                    },
+                    {
+                        "Name":  "UserResponse",
+                        "Type":  "object",
+                        "Required":  "id, full_name, email, role, is_active, created_at",
+                        "Fields":  "id, full_name, email, role, is_active, created_at"
+                    },
+                    {
+                        "Name":  "ValidationError",
+                        "Type":  "object",
+                        "Required":  "loc, msg, type",
+                        "Fields":  "loc, msg, type, input, ctx"
+                    },
+                    {
+                        "Name":  "WorkforceActivityCreate",
+                        "Type":  "object",
+                        "Required":  "activity_type, description",
+                        "Fields":  "employee_id, activity_type, description, activity_data"
+                    },
+                    {
+                        "Name":  "WorkforceActivityResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_id, actor_user_id, activity_type, description, activity_data, source, created_at",
+                        "Fields":  "id, employee_id, actor_user_id, activity_type, description, activity_data, source, created_at"
+                    },
+                    {
+                        "Name":  "WorkforceAlertResponse",
+                        "Type":  "object",
+                        "Required":  "id, employee_id, prediction_id, recipient_user_id, title, message, priority, status, acknowledged_at, resolved_at, created_at",
+                        "Fields":  "id, employee_id, prediction_id, recipient_user_id, title, message, priority, status, acknowledged_at, resolved_at, created_at"
+                    }
+                ]
+}

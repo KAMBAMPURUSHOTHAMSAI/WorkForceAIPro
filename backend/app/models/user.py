@@ -23,6 +23,12 @@ class User(Base):
     role = Column(String(20), nullable=False, default="EMPLOYEE")
     is_active = Column(Boolean, nullable=False, default=True)
 
+    token_version = Column(
+        Integer,
+        nullable=False,
+        default=0,
+        server_default="0",
+    )
     created_at = Column(
         DateTime(timezone=True),
         nullable=False,

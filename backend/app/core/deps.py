@@ -1,9 +1,9 @@
+import jwt
+
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jwt.exceptions import InvalidTokenError
 from sqlalchemy.orm import Session
-
-import jwt
 
 from app.core.security import ALGORITHM, SECRET_KEY
 from app.db.session import get_db
@@ -33,18 +33,35 @@ def get_current_user(
         )
 
         subject = payload.get("sub")
+        token_version = payload.get("ver", 0)
 
         if subject is None:
             raise credentials_error
 
+        if (
+            type(token_version) is not int
+            or token_version < 0
+        ):
+            raise credentials_error
+
         user_id = int(subject)
 
-    except (InvalidTokenError, ValueError, TypeError):
+    except (
+        InvalidTokenError,
+        ValueError,
+        TypeError,
+    ):
         raise credentials_error
 
     user = db.get(User, user_id)
 
     if user is None or not user.is_active:
+        raise credentials_error
+
+    current_version = int(user.token_version or 0)
+
+    # Reject access tokens invalidated by password or role changes.
+    if current_version != token_version:
         raise credentials_error
 
     return user
